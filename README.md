@@ -80,10 +80,6 @@ tax-loss-harvesting-ml-service/
 ```
 
 ## 📸 Screenshots
-![Login page](<frontend\Screenshots\Screenshot 2026-04-14 143147.png>)
-![Home page](<frontend\Screenshots\Screenshot 2026-04-14 143228.png>)
-![List](<frontend\Screenshots\Screenshot 2026-04-14 143302.png>)
-![Dashboard](<frontend\Screenshots\Screenshot 2026-04-14 143351.png>)
 
 
 ## 📝 License
