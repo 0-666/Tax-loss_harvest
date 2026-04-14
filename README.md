@@ -80,7 +80,10 @@ tax-loss-harvesting-ml-service/
 ```
 
 ## 📸 Screenshots
-
+![login page](<Screenshot 2026-04-14 143147.png>)
+![home page](<Screenshot 2026-04-14 143228.png>)
+![Dashbored](<Screenshot 2026-04-14 143302.png>)
+![List](<Screenshot 2026-04-14 143351.png>)
 
 ## 📝 License
 The project is licensed under the MIT License.
