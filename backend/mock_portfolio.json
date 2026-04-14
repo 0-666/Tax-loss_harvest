@@ -1,0 +1,94 @@
+{
+  "portfolio": [
+    {
+      "id": 1,
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "quantity": 100,
+      "buyPrice": 185.50,
+      "currentPrice": 172.25,
+      "sector": "Technology"
+    },
+    {
+      "id": 2,
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "quantity": 50,
+      "buyPrice": 380.00,
+      "currentPrice": 375.50,
+      "sector": "Technology"
+    },
+    {
+      "id": 3,
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "quantity": 30,
+      "buyPrice": 150.75,
+      "currentPrice": 138.50,
+      "sector": "Technology"
+    },
+    {
+      "id": 4,
+      "ticker": "TSLA",
+      "name": "Tesla Inc.",
+      "quantity": 75,
+      "buyPrice": 240.00,
+      "currentPrice": 185.30,
+      "sector": "Automotive"
+    },
+    {
+      "id": 5,
+      "ticker": "AMZN",
+      "name": "Amazon.com Inc.",
+      "quantity": 40,
+      "buyPrice": 175.25,
+      "currentPrice": 178.50,
+      "sector": "Consumer"
+    },
+    {
+      "id": 6,
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "quantity": 60,
+      "buyPrice": 875.00,
+      "currentPrice": 820.75,
+      "sector": "Technology"
+    },
+    {
+      "id": 7,
+      "ticker": "META",
+      "name": "Meta Platforms Inc.",
+      "quantity": 80,
+      "buyPrice": 310.00,
+      "currentPrice": 285.50,
+      "sector": "Technology"
+    },
+    {
+      "id": 8,
+      "ticker": "NFLX",
+      "name": "Netflix Inc.",
+      "quantity": 45,
+      "buyPrice": 420.00,
+      "currentPrice": 395.25,
+      "sector": "Media"
+    },
+    {
+      "id": 9,
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "quantity": 120,
+      "buyPrice": 165.50,
+      "currentPrice": 152.75,
+      "sector": "Finance"
+    },
+    {
+      "id": 10,
+      "ticker": "BA",
+      "name": "Boeing Co.",
+      "quantity": 35,
+      "buyPrice": 195.00,
+      "currentPrice": 172.50,
+      "sector": "Aerospace"
+    }
+  ]
+}

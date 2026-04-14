@@ -1,0 +1,31 @@
+/* App.css - Additional custom styles if needed */
+
+/* Smooth transitions */
+a,
+button,
+input,
+[tabindex] {
+  @apply transition-all duration-200;
+}
+
+/* Focus states */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-blue-500;
+}
+
+/* Responsive container */
+.container {
+  @apply mx-auto px-4;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
