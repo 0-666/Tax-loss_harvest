@@ -1,35 +1,93 @@
-# Tax-Loss Harvesting Simulator
+# 🧠 Tax-Loss Harvesting ML Service
+The Tax-Loss Harvesting ML Service is a comprehensive platform designed to provide users with a robust tax-loss harvesting strategy. This service utilizes machine learning algorithms to optimize portfolio performance and minimize tax liabilities. The platform consists of a backend API built using FastAPI, a frontend application built using React, and a database managed using MongoDB.
 
-A full-stack application built during a 4-hour hackathon to simulate optimal tax-loss harvesting strategies using a greedy algorithm, machine learning scoring, and a modern React UI.
+## 🚀 Features
+* **Machine Learning Integration**: The service uses XGBoost models to predict harvest scores and optimize portfolio performance.
+* **Real-time Stock Data**: The platform retrieves real-time stock quote data using the yfinance library.
+* **User Authentication**: The service provides user authentication and authorization using JSON Web Tokens (JWTs).
+* **Portfolio Management**: The platform allows users to manage their portfolios, including adding and removing positions, and updating lock status.
+* **Tax-Loss Harvesting Simulation**: The service provides a greedy tax-loss harvesting algorithm to simulate the sale of assets and minimize tax liabilities.
 
-## 🏗️ Architecture
+## 🛠️ Tech Stack
+* **Backend**:
+	+ FastAPI for building the API
+	+ Pydantic for defining request and response models
+	+ yfinance for retrieving stock data
+	+ yahooquery for searching stocks
+	+ random for simulating ML scores
+	+ XGBoost for building the ML model
+	+ pandas for data manipulation
+	+ numpy for numerical computations
+	+ joblib for saving the trained model
+	+ sklearn for splitting the data into training and testing sets
+* **Frontend**:
+	+ React for building the frontend application
+	+ React Router for client-side routing
+	+ Axios for making HTTP requests to the backend API
+* **Database**:
+	+ MongoDB for storing user data and portfolio information
+	+ Mongoose for interacting with the database
 
-### Tech Stack
-- **Frontend:** React 19 + Tailwind CSS + Lucide Icons
-- **Backend:** Node.js + Express
-- **ML Microservice:** Python + FastAPI
-- **Database:** MongoDB (optional for user auth)
+## 📦 Installation
+To install the project, follow these steps:
+1. Clone the repository using `git clone https://github.com/your-repo/tax-loss-harvesting-ml-service.git`
+2. Install the required dependencies using `pip install -r requirements.txt` for the backend and `npm install` for the frontend
+3. Set up the database by running `mongod` and creating a new database
+4. Start the backend server using `uvicorn main:app --host 0.0.0.0 --port 8000`
+5. Start the frontend application using `npm start`
 
-### System Components
+## 💻 Usage
+To use the platform, follow these steps:
+1. Register a new user account by sending a POST request to `/api/register`
+2. Log in to the application by sending a POST request to `/api/login`
+3. Retrieve the user's portfolio by sending a GET request to `/api/portfolio`
+4. Add a new position to the portfolio by sending a POST request to `/api/portfolio/add`
+5. Update the lock status of a position by sending a PATCH request to `/api/portfolio/update`
 
+## 📂 Project Structure
+```markdown
+tax-loss-harvesting-ml-service/
+├── ai-service/
+│   ├── app.py
+│   ├── train.py
+│   ├── utils/
+│   │   ├── feature_engineering.py
+│   │   ├── data_provider.py
+│   ├── models/
+│   │   ├── xgboost_model.py
+│   ├── requirements.txt
+├── frontend/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── services/
+│   │   │   ├── api.js
+│   ├── package.json
+├── backend/
+│   ├── server.js
+│   ├── config/
+│   │   ├── db.js
+│   ├── controller/
+│   │   ├── authController.js
+│   │   ├── portfolioController.js
+│   ├── model/
+│   │   ├── userModel.js
+│   │   ├── portfolioModel.js
+│   ├── routes/
+│   │   ├── simulator.js
+│   │   ├── portfolioRoute.js
+│   ├── package.json
 ```
-┌─────────────────────────────────────────────────────┐
-│                   React Frontend (5175)              │
-│  Dashboard → MetricsRow, PortfolioTable, Charts    │
-└────────────────────────┬────────────────────────────┘
-                         │
-                         ▼
-┌─────────────────────────────────────────────────────┐
-│      Node.js Express Backend (5000)                  │
-│  POST /api/simulate → Greedy Algorithm Processor   │
-└────────────────────────┬────────────────────────────┘
-                         │
-                         ▼
-┌─────────────────────────────────────────────────────┐
-│    Python FastAPI ML Service (8000)                  │
-│  POST /api/ml-score → RSI/MACD Simulator            │
-└─────────────────────────────────────────────────────┘
-```
+
+## 📸 Screenshots
+
+
+## 📝 License
+The project is licensed under the MIT License.
+
+## 📬 Contact
+For any questions or concerns, please contact us at [snikhil3290@gmail.com](mailto:snikhil3290@gmail.com).
+
 
 ## 🚀 Quick Start
 
@@ -259,47 +317,6 @@ Visual breakdown showing:
 - Asset distribution legend
 - Percentage contribution
 
-## 📝 File Structure
-
-```
-tax-loss/
-├── ai-service/
-│   ├── app.py              # FastAPI ML scoring service
-│   ├── utils/
-│   ├── model/
-│   └── schema.py
-├── backend/
-│   ├── server.js           # Express server entry point
-│   ├── routes/
-│   │   ├── authRoute.js
-│   │   └── simulator.js    # Greedy algorithm implementation
-│   ├── model/
-│   │   └── userModel.js
-│   ├── middleware/
-│   ├── config/
-│   │   └── db.js
-│   ├── mock_portfolio.json # Sample portfolio data
-│   ├── package.json
-│   └── .env
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   │   ├── Dashboard.jsx
-    │   │   ├── MetricsRow.jsx
-    │   │   ├── PortfolioTable.jsx
-    │   │   ├── RecommendationList.jsx
-    │   │   ├── HarvestChart.jsx
-    │   │   └── Toast.jsx
-    │   ├── pages/
-    │   ├── App.jsx
-    │   ├── App.css
-    │   ├── index.css
-    │   └── main.jsx
-    ├── tailwind.config.js
-    ├── postcss.config.js
-    ├── package.json
-    └── vite.config.js
-```
 
 ## 🔐 Authentication
 
@@ -366,6 +383,3 @@ Top Recommendations:
 
 MIT © 2026 Tax-Loss Harvesting Team
 
----
-
-**Built with ❤️ during a 4-hour hackathon**
